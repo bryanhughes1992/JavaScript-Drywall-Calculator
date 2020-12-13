@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300&display=swap');
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.calc-container {
+    width: 70vw;
+    border: solid #000 1px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    overflow: inherit;
+
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 2em;
+}
+
+form {
+    font-family: 'Playfair Display', serif;
+    width: 45vw;
+    margin: 0 auto;
+}
+
+fieldset {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+.input-field {
+    padding: 12px;
+    font-size: 1.5em;
+}
+
+.wall-input {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+}
+
+.submit-btn {
+    width: 10em;
+    height: 2.5em;
+    margin: 2em auto;
+    border: solid #fff 1px;
+    border-radius: 5px;
+    background-color: #444;
+    font-family: 'Poppins', serif;
+    color: #EEE;
+    font-size: 1em;
+}
+
+.hidden-content {
+    display: none;
+}

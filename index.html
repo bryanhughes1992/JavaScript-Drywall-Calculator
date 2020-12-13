@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Bryan Hughes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" type="text/css" rel="stylesheet">
+    <script src="scripts/script.js"></script>
+    <title>Drywall Calculator</title>
+</head>
+<body>
+    <main>
+        <div class="calc-container">
+            <h1 class="page-title">
+                DRYWALL CALCULATOR
+            </h1>
+            <p>
+                Please enter the length and the width of your wall.
+            </p>
+            <form name="drywallForm" id="drywallForm" method="POST">
+                <fieldset>
+                    <div class="input-field">
+                        <label>Length of Wall (Inches):</label>
+                        <input
+                            class="wall-input"
+                            type="number" id="wallLength" name="wallLength"
+                            placeholder="272"
+                            min="0"
+                        >
+                    </div>
+                    <div class="input-field">
+                        <label for="wallWidth">
+                            Width of Wall (inches):
+                        </label>
+                        <input
+                            class="wall-input"
+                            type="number" id="walllWidth" name="wallWidth"
+                            placeholder="110"
+                            min="0"
+                        >
+                    </div>
+                    <input type="submit" class="submit-btn" id="submitBtn">
+                </fieldset>
+            </form>
+        </div>
+        <div id="hiddenContent" class="hidden-content">
+            <p class="sheets" id="amountOfSheets">
+
+            </p>
+        </div>
+    </main>
+</body>
+</html>

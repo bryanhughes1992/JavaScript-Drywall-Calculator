@@ -15,55 +15,66 @@ window.onload = function() {
     //Listen for the calculate button being clicked
     submitBtn.addEventListener("click", calculateSheets);
 
-    //Listen for the calculate button being clicked
-
-
     function calculateSheets(calcLength, calcWidth) {
 
         //Set the first parameter the value of the length input field
         calcLength = drywallForm.wallLength.value;
 
-        Math.ceil(parseFloat(calcLength));
+        //Parse the length to a float
+        parseFloat(calcLength);
 
         //Set the second parameter to the value of the width input field
         calcWidth = drywallForm.wallWidth.value;
 
-        Math.ceil(parseFloat(calcWidth));
+        //Parse the width to a float
+        parseFloat(calcWidth);
 
-        //If the wall's length is
+        //If these conditions fail, return and focus on the proper field.
         if (calcLength <= 0 || calcLength === null || calcLength === undefined || calcLength === "" || isNaN(calcLength)) {
 
+            //Alert the user to input a valid number
             alert("Please input a valid length");
 
+            //Focus on the length input field
             focus(drywallForm.wallLength);
 
+            //Change the background color to pink
+            drywallForm.wallLength.style.backgroundColor = "pink";
+
+            //Stop the form from sending
             return;
-
+        //If these conditions also fail,
         } else if ( calcWidth <= 0 || calcWidth === null || calcWidth === undefined || isNaN(calcWidth)) {
-
+            //Alert the user to input a valid width
             alert("Please enter a valid width");
 
+            //Focus on the width input field
             focus(drywallForm.wallWidth);
 
+            //Set the width input field background color to pink
             drywallForm.wallWidth.style.backgroundColor = "pink";
 
+            //Stop the form from sending
             return;
-
+        //If it passes those conditions,
         } else {
-
-            var wallSqFootage = calcLength * calcWidth;
-
+            drywallForm.wallWidth.style.backgroundColor = "chartreuse";
+            //Calculate the square footage of the wall
+            var wallSqFootage = (calcLength * calcWidth);
+            console.log(wallSqFootage);
+            //Calculate the amount of sheets needed
             var amountOfSheets = wallSqFootage / 32;
 
-            var sheetString = `${amountOfSheets} sheets of drywall are needed for this wall`;
+            console.log(amountOfSheets);
 
-            drywallForm.style.display = "none";
+            var sheetString = `${Math.ceil(amountOfSheets)} sheets of drywall are needed for this wall`;
 
             hiddenContent.style.display = "flex";
 
             hiddenContent.style.flexFlow = "column wrap";
 
-            hiddenContent.innerHTML = sheetString;
+            hiddenContent.innerText = sheetString;
+            console.log(sheetString);
 
 
             return;

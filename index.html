@@ -20,11 +20,11 @@
             <form name="drywallForm" id="drywallForm" method="POST">
                 <fieldset>
                     <div class="input-field">
-                        <label>Length of Wall (Inches):</label>
+                        <label>Length of Wall (Feet):</label>
                         <input
                             class="wall-input"
                             type="number" id="wallLength" name="wallLength"
-                            value="0"
+                            placeholder="0"
                             min="0"
                         >
                     </div>
@@ -35,18 +35,16 @@
                         <input
                             class="wall-input"
                             type="number" id="walllWidth" name="wallWidth"
-                            value="0"
                             min="0"
+                            placeholder="0"
                         >
                     </div>
                 </fieldset>
+                <div id="hiddenContent" class="hidden-content">
+
+                </div>
             </form>
             <button type="submit" class="submit-btn" id="submitBtn">calculate</button>
-        </div>
-        <div id="hiddenContent" class="hidden-content">
-            <p class="sheets" id="amountOfSheets">
-                sss
-            </p>
         </div>
     </main>
 </body>

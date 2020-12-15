@@ -3,7 +3,7 @@ window.onload = function() {
 
     //Capture the entire drywall form as a variable
     var drywallForm = document.forms[0];
-
+    
     //Capture the submit button as a variable
     var submitBtn = document.getElementById('submitBtn');
 
@@ -44,6 +44,7 @@ window.onload = function() {
 
             //Stop the form from sending
             return;
+
         //If these conditions also fail,
         } else if ( calcWidth <= 0 || calcWidth === null || calcWidth === undefined || isNaN(calcWidth)) {
             //Alert the user to input a valid width

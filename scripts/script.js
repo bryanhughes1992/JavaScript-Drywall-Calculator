@@ -3,42 +3,38 @@ window.onload = function() {
     var drywallForm = document.forms.drywallForm;
     //Capture the submit button as a variable
     var submitBtn = document.getElementById('submitBtn');
-    //Caputre the hidden content as a variable
+    //Capture the hidden content as a variable
     var hiddenContent = document.getElementById('hiddenContent');
     //Hide the hidden content
-    hiddenContent.display = "none";
-    //Listen for a click event on the submit button
-    submitBtn.addEventListener("click", hideForm);
+    hiddenContent.style.display = "none";
     //Listen for the drywall form being submitted
     submitBtn.addEventListener("click", calculateSheets);
 
-
-    function hideForm() {
-        drywallForm.style.display = "none";
-
-
-    }
-
-    function calculateSheets() {
-        var length = drywallForm.wallLength;
-        var width = drywallForm.wallWidth;
-
-
-
-
-        if (wallLength < 0 || wallLength === null) {
+    function calculateSheets(wallLength, wallWidth) {
+        //If the wall's length is
+        if (wallLength < "0" || wallLength === "" || wallLength === null) {
+            alert("Please input a positive number");
+            focus(wallLength);
             return;
-        } else if (wallWidth < 0 || wallWidth === null) {
+        } else if (wallWidth === "" || wallWidth < "0" || wallWidth === null) {
+            alert("test");
             return;
         } else {
-            var wallSquareFootage = wallLength * wallWidth;
-            var amountOfSheets = wallSquareFootage / 32;
-            var textBox = document.getElementById('amountOfSheets');
-            var sheetString = `You need ${amountOfSheets} sheets for this wall! `;
-            textBox.innerHTML = sheetString;
+            drywallForm.style.display = "none";
             hiddenContent.style.display = "flex";
+            hiddenContent.style.flexFlow = "column";
+            //Set the first parameter the value of the length input field
+            wallLength = document.drywallForm.wallLength.value;
+            //Set the second parameter to the value of the width input field
+            wallWidth = document.drywallForm.wallWidth.value;
+            //The wall's square footage is equal to this
+            var wallSquareFootage = wallLength * wallWidth;
+            //The amount of sheets needed is equal the wall's square footage divided by the square footage of the drywall sheet
+            var amountOfSheets = wallSquareFootage / 32;
+            //Set a hardcoded string to the display this message
+            var sheetString = `You need ${amountOfSheets} sheets for this wall! `;
+            hiddenContent.innerText = sheetString;
             return;
         }
     }
-    calculateSheets(length, width);
 };

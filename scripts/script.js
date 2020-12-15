@@ -56,29 +56,42 @@ window.onload = function() {
 
             //Stop the form from sending
             return;
+
         //If it passes those conditions,
         } else {
+            //Set background color to confirm calculation
+            drywallForm.wallLength.style.backgroundColor = "chartreuse";
+
+            //Set background color to confirm calculation
             drywallForm.wallWidth.style.backgroundColor = "chartreuse";
+
             //Calculate the square footage of the wall
             var wallSqFootage = (calcLength * calcWidth);
             console.log(wallSqFootage);
+
             //Calculate the amount of sheets needed
             var amountOfSheets = wallSqFootage / 32;
-
             console.log(amountOfSheets);
 
+            //Hard coded string with amount of sheets needed
             var sheetString = `${Math.ceil(amountOfSheets)} sheets of drywall are needed for this wall`;
 
-            hiddenContent.style.display = "flex";
-
-            hiddenContent.style.flexFlow = "column wrap";
-
+            //Display the hidden <div></div>
+            hiddenContent.style.display = "inline";
+            //Set the div's innerHTML to the sheetString
             hiddenContent.innerText = sheetString;
             console.log(sheetString);
 
+            submitBtn.innerHTML = "Refresh";
 
+            submitBtn.addEventListener("click", refreshPage);
+
+            function refreshPage() {
+                setTimeout("location.reload(true);",0);
+            }
+
+            //Stop the form from submitting
             return;
         }
-
     }
 };

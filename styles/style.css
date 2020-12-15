@@ -24,7 +24,7 @@ html::-webkit-scrollbar {
 
 .page-title {
     font-family: 'Playfair Display', serif;
-    font-size: 5em;
+    font-size: 3.5em;
     text-align: center;
     margin: 0 auto;
 }
@@ -32,12 +32,12 @@ html::-webkit-scrollbar {
 p {
     font-family: 'Playfair Display', serif;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.2em;
 }
 
 form {
     font-family: 'Playfair Display', serif;
-    width: 45vw;
+    width: 60vw;
     margin: 0 auto;
 }
 
@@ -73,5 +73,9 @@ fieldset {
 }
 
 .hidden-content {
-    display: none;
+    font-family: "Poppins", serif;
+    text-align: center;
+    padding: 0.6em;
+    margin: 0.6em;
+    background-color: red;
 }

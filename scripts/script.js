@@ -3,7 +3,7 @@ window.onload = function() {
 
     //Capture the entire drywall form as a variable
     var drywallForm = document.forms[0];
-    
+
     //Capture the submit button as a variable
     var submitBtn = document.getElementById('submitBtn');
 
@@ -33,9 +33,6 @@ window.onload = function() {
         //If these conditions fail, return and focus on the proper field.
         if (calcLength <= 0 || calcLength === null || calcLength === undefined || calcLength === "" || isNaN(calcLength)) {
 
-            //Alert the user to input a valid number
-            alert("Please input a valid length");
-
             //Focus on the length input field
             focus(drywallForm.wallLength);
 
@@ -47,8 +44,6 @@ window.onload = function() {
 
         //If these conditions also fail,
         } else if ( calcWidth <= 0 || calcWidth === null || calcWidth === undefined || isNaN(calcWidth)) {
-            //Alert the user to input a valid width
-            alert("Please enter a valid width");
 
             //Focus on the width input field
             focus(drywallForm.wallWidth);

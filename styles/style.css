@@ -7,10 +7,12 @@ html, body {
     padding: 0;
 }
 
+/*Remove the scrollbar*/
 html::-webkit-scrollbar {
     display: none;
 }
 
+/*Master Container*/
 .calc-container {
     width: 50vw;
     border: solid #000 1px;
@@ -20,6 +22,7 @@ html::-webkit-scrollbar {
     flex-flow: column wrap;
 }
 
+/*Page Title*/
 .page-title {
     font-family: 'Playfair Display', serif;
     font-size: 3.5em;
@@ -27,18 +30,21 @@ html::-webkit-scrollbar {
     margin: 0 auto;
 }
 
+/*Page Instructions*/
 p {
     font-family: 'Playfair Display', serif;
     text-align: center;
     font-size: 1.2em;
 }
 
+/*Wall Form*/
 form {
     font-family: 'Poppins', sans-serif;
     width: 45vw;
     margin: 0 auto;
 }
 
+/*Form Fieldset*/
 fieldset {
     display: flex;
     flex-flow: row wrap;
@@ -47,6 +53,7 @@ fieldset {
     justify-content: space-around;
 }
 
+/*DIV holding the input fields*/
 .input-field {
     padding: 12px;
     font-size: 1.5em;
@@ -54,6 +61,7 @@ fieldset {
     margin: 0em auto 0.5em auto;
 }
 
+/*User input styles*/
 .wall-input {
     display: block;
     font-family: 'Poppins', sans-serif;
@@ -63,6 +71,7 @@ fieldset {
     padding: 5px;
 }
 
+/*Submit button*/
 .submit-btn {
     width: 10em;
     height: 2.5em;
@@ -75,6 +84,7 @@ fieldset {
     font-size: 1em;
 }
 
+/*Styles for hidden content*/
 .hidden-content {
     font-family: "Poppins", serif;
     text-align: center;

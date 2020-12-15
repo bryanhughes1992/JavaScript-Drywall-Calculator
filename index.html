@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--UTF-8 Character Set-->
     <meta charset="UTF-8">
+    <!--Meta authorship data-->
     <meta name="author" content="Bryan Hughes">
+    <!--Meta viewport data-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Stylesheet linkage-->
     <link href="styles/style.css" type="text/css" rel="stylesheet">
+    <!--Javascript Linkage-->
     <script src="scripts/script.js"></script>
+    <!--Title of page-->
     <title>Drywall Calculator</title>
 </head>
 <body>
     <main>
+        <!--Master Container-->
         <div class="calc-container">
+            <!--Page Title-->
             <h1 class="page-title">
                 DRYWALL CALCULATOR
             </h1>
+            <!--Page Instructions-->
             <p>
-                Please enter the length and the width of your wall.
+                Please enter the length and the width of your wall to determine the amount of drywall sheets required (it rounds up).
             </p>
+            <!--Form for wall data-->
             <form name="drywallForm" id="drywallForm" method="POST">
                 <fieldset>
+                    <!--Wall Length-->
                     <div class="input-field">
                         <label>Length (Feet):</label>
                         <input
@@ -28,6 +39,7 @@
                             min="0"
                         >
                     </div>
+                    <!--Wall Width-->
                     <div class="input-field">
                         <label>
                             Width (Feet):
@@ -39,11 +51,13 @@
                             placeholder="0"
                         >
                     </div>
+                    <!--Hidden content for after submission-->
                     <div id="hiddenContent" class="hidden-content">
-
+                        <!--Space for string-->
                     </div>
                 </fieldset>
             </form>
+            <!--Submit button-->
             <button type="submit" class="submit-btn" id="submitBtn">Calculate</button>
         </div>
     </main>

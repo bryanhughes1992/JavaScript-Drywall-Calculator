@@ -12,14 +12,12 @@ html::-webkit-scrollbar {
 }
 
 .calc-container {
-    width: 70vw;
+    width: 50vw;
     border: solid #000 1px;
     height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-flow: column wrap;
-    overflow: inherit;
-
 }
 
 .page-title {
@@ -36,8 +34,8 @@ p {
 }
 
 form {
-    font-family: 'Playfair Display', serif;
-    width: 60vw;
+    font-family: 'Poppins', sans-serif;
+    width: 45vw;
     margin: 0 auto;
 }
 
@@ -52,12 +50,17 @@ fieldset {
 .input-field {
     padding: 12px;
     font-size: 1.5em;
+    justify-content: space-around;
+    margin: 0em auto 0.5em auto;
 }
 
 .wall-input {
     display: block;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1em;
+    justify-content: space-around;
+    border-radius: 3px;
+    padding: 5px;
 }
 
 .submit-btn {
@@ -77,5 +80,7 @@ fieldset {
     text-align: center;
     padding: 0.6em;
     margin: 0.6em;
-    background-color: red;
+    background-color: lightgreen;
+    border-radius: 3px;
+    font-size: 1.2em;
 }

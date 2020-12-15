@@ -1,3 +1,4 @@
+//Onload, do the following:
 window.onload = function() {
 
     //Capture the entire drywall form as a variable
@@ -15,8 +16,8 @@ window.onload = function() {
     //Listen for the calculate button being clicked
     submitBtn.addEventListener("click", calculateSheets);
 
+    //Handles the input data for the drywall form
     function calculateSheets(calcLength, calcWidth) {
-
         //Set the first parameter the value of the length input field
         calcLength = drywallForm.wallLength.value;
 
@@ -59,19 +60,13 @@ window.onload = function() {
 
         //If it passes those conditions,
         } else {
-            //Set background color to confirm calculation
-            drywallForm.wallLength.style.backgroundColor = "chartreuse";
-
-            //Set background color to confirm calculation
-            drywallForm.wallWidth.style.backgroundColor = "chartreuse";
-
             //Calculate the square footage of the wall
             var wallSqFootage = (calcLength * calcWidth);
-            console.log(wallSqFootage);
+            console.log(`${wallSqFootage}sqFt`);
 
             //Calculate the amount of sheets needed
             var amountOfSheets = wallSqFootage / 32;
-            console.log(amountOfSheets);
+            console.log(`${amountOfSheets} sheets`);
 
             //Hard coded string with amount of sheets needed
             var sheetString = `${Math.ceil(amountOfSheets)} sheets of drywall are needed for this wall`;
@@ -82,10 +77,13 @@ window.onload = function() {
             hiddenContent.innerText = sheetString;
             console.log(sheetString);
 
+            //Change the text of the button to "Refresh"
             submitBtn.innerHTML = "Refresh";
 
+            //When the refresh button is clicked, fire the refreshPage() function
             submitBtn.addEventListener("click", refreshPage);
 
+            //Refresh the page after 0milliseconds
             function refreshPage() {
                 setTimeout("location.reload(true);",0);
             }
